@@ -1,0 +1,228 @@
+# Video Lecture 3.2 - WHILE Loops
+
+# Problem 1
+
+x = int(input("enter repeated number: " ))
+total = 0
+count = 1
+
+while count <= x:
+  total += count
+  count += 1
+  print("Hello World!")
+
+# Video Lecture 3.2 - WHILE Loops
+
+# Problem 2
+
+x = int(input("how many consecutive numbers starting from 1 to half and add accumlatively: " ))
+
+total = 0
+count = 1
+
+while count <= x:
+  total += (0.5)*count
+  count += 1
+print(total)
+
+#TIY 2
+#ask fot n to be entered
+n = int(input("Please enter the number: "))
+#set counter equal to 1
+count = 1
+while count <= n:
+    #divide the counter by 2
+    half = count/2
+    #print half of the current number
+    print(half)
+    #add 1 to the counter
+    count += 1
+
+# Video Lecture 3.3 - WHILE Loop Examples and Loop Tracing
+
+m = int(input("enter m: "))
+n = int(input("enter n: "))
+total = 0
+
+while m <= n:
+  total += m
+  m += 1
+
+print("the total is", total)
+
+
+num = 1
+while num <= 10:
+  if not (num % 2) == 0:
+    print(num, "is odd")
+  num += 1
+  continue
+
+# kickball project
+
+import random
+
+available_players = ['Anastasia', 'Eli', 'Jamal', 'Jada', 'Theo', 'Michelle', 'Adam', 'Rhea', 'Charlie', 'Jasmine', 'Marley', 'Kenji', 'Sydney', 'Yara']
+
+jaleesas_team = ['Jaleesa']
+
+rahims_team = ['Rahim']
+
+while len(jaleesas_team) < 8:
+  player_selected = random.choice(available_players)
+  jaleesas_team.append(player_selected)
+  available_players.remove(player_selected)
+
+rahims_team.extend(available_players)
+
+print(jaleesas_team)
+print(rahims_team)
+
+# Video Lecture 3.4 - FOR Loops
+
+x = int(input("enter x: "))
+total = 0
+
+for i in range(1, x+1):
+  print("Hello World!")
+
+n = int(input("enter n: "))
+sum = 0
+
+for i in range(1, n+1, 2):
+  sum += i
+
+print("The sum of the odd numbers from 1 to", n, "is", sum)
+
+test_scores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for score in test_scores:
+  score += 3
+  print(score)
+
+from typing import Collection
+# marbles - kortext chapter 9
+
+import random
+
+secret_bag = ['pink', 'blue', 'green', 'orange', 'red', 'purple', 'green', 'blue', 'blue', 'red', 'green', 'purple', 'yellow', 'red', 'pink', 'red', 'green', 'yellow']
+
+collection  = ['red', 'pink', 'orange', 'red', 'pink', 'yellow', 'pink', 'yellow']
+
+new_collection = []
+
+marbles_picked = 0
+
+for x in range(6):
+  secret_marble = random.choice(secret_bag)
+  if secret_marble == 'green':
+    new_collection.append(secret_marble)
+    secret_bag.remove(secret_marble)
+    marbles_picked += 1
+    if marbles_picked == 5:
+      print('You have made your 5 picks already')
+      break
+  else:
+    marbles_picked += 1
+    if marbles_picked == 5:
+      print('You have made your 5 picks already')
+      break
+
+#print('previous collection', collection)
+#print('secret_bag', secret_bag)
+print('new collection', new_collection)
+#print('marbles picked', marbles_picked)
+
+total = 0
+while 1==1:
+  n = int(input("enter a number: "))
+  if n <= 0:
+    print(total)
+    break
+  total += n
+  print(total)
+print(total)
+
+total = 0
+
+x = int(input('enter x: '))
+
+while total < x:
+  total += 1
+  print('Hello World!')
+
+# Video Lecture 3.7 - CONTINUE Statements TIY
+
+m = int(input("enter m: "))
+n = int(input("enter n: "))
+
+sum = 0
+
+for i in range(m, n+1, 3):
+  sum += i
+  print(sum)
+
+n = 0
+
+for k in range(5):
+  for p in range(-1, -5, -1):
+    n += 1
+print(n)
+
+for letter in "sing":
+  if letter == "n":
+    continue
+  print(letter)
+
+n = 0
+while(n<100):
+  n+=3
+print(n)
+
+for n in range(-1, -4, -1):
+  print(n)
+
+for i in range(10):
+  print(i)
+  if i % 2 == 0:
+    print(i+10)
+  elif i % 3 == 0:
+    continue
+  elif i % 5 == 0:
+    break
+  print("Hello")
+print("Hello again")
+
+for i in range(3, 16, 2):
+  print(i)
+
+total = 5
+num = 1
+for i in range(5):
+  total += 10
+  num *= 2
+  print("i =", i, ", total =", total, ", num = ", num)
+
+n = 10
+total = 0
+while n <=50:
+  total += n*n
+  n += 10
+  print(n)
+  print(total)
+
+n = 10
+for i in range(1, n+1):
+  print(i*i, end="")
+
+n = 10
+i = 1
+while i<=n:
+  print(i*i, end="")
+  i+=1
+
+n = 10
+i = 1
+while i<=n:
+  print(i*i, end="")
+  i += 1
