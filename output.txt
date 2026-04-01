@@ -1,0 +1,3 @@
+Number of characters: 215
+Number of words: 40
+Number of lines: 33
